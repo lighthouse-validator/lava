@@ -1,4 +1,4 @@
-rpcprovider.yml должен лежать в домашней директории cd ~
+Создаем rpcprovider.yml должен лежать в домашней директории cd ~
 
 #стейкаем на LAV1
 
@@ -309,7 +309,7 @@ lavad tx pairing unstake-provider POLYGON1 --from lighthouse --account-number 41
 
 lavad tx pairing stake-provider "APT1" \
 "50006000000ulava" \
-"167.86.82.139:2261,rest,2" 2 \
+"123.45.67.890:2261,rest,2" 2 \
 --from lava@1vu3xj8yv8280mx5pt64q4xg37692txwm422ymp \
 --provider-moniker Lighthouse \
 --keyring-backend "test" \
