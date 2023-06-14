@@ -1,17 +1,21 @@
 endpoints:
   - api-interface: tendermintrpc
     chain-id: (sample) LAV1
-    network-address: 0.0.0.0:2221
+    network-address: 0.0.0.0:2221(порт указывается тот который будет прослушиваться)
     node-urls:
-      - url: ws://ip_server:26647/websocket
-      - url: http://ip_server:26647
+      - url: ws://ip_server_chain:port(sample 26647)/websocket
+      - url: http://ip_server:port(sample 26647)
   - api-interface: grpc
     chain-id: (sample)LAV1
-    network-address: 0.0.0.0:2221
+    network-address: 0.0.0.0:2221(порт указывается тот который будет прослушиваться)
     node-urls:
-      - url: ip_server:9080
+      - url: ip_server_chain:port(sample 9080)
   - api-interface: rest
     chain-id: (sample)LAV1
-    network-address: 0.0.0.0:2221
+    network-address: 0.0.0.0:2221(порт указывается тот который будет прослушиваться)
     node-urls:
-      - url: http://ip_server:1307
+      - url: http://ip_server_chain:port(sample 1307)
+      
+      
+# ip_server_chain - ip того сервера, где запущена цепочка/сеть/блокчейн, порты тоже того сервера
+# вообще можно разные интерфейсы брать с разных серверов
