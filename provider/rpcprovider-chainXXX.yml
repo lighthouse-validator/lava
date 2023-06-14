@@ -1,0 +1,17 @@
+endpoints:
+  - api-interface: tendermintrpc
+    chain-id: (sample) LAV1
+    network-address: 0.0.0.0:2221
+    node-urls:
+      - url: ws://ip_server:26647/websocket
+      - url: http://ip_server:26647
+  - api-interface: grpc
+    chain-id: (sample)LAV1
+    network-address: 0.0.0.0:2221
+    node-urls:
+      - url: ip_server:9080
+  - api-interface: rest
+    chain-id: (sample)LAV1
+    network-address: 0.0.0.0:2221
+    node-urls:
+      - url: http://ip_server:1307
