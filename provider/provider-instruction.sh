@@ -2,13 +2,13 @@ rpcprovider.yml должен лежать в домашней директори
 
 #стейкаем на LAV1
 
-lavad tx pairing stake-provider "LAV1" "50006000000ulava" "167.86.82.139:2221,tendermintrpc,2 167.86.82.139:2221,rest,2 167.86.82.139:2221,grpc,2" 2 --from lighthouse --provider-moniker Lighthouse --keyring-backend "test" --chain-id "lava-testnet-1" --gas="auto" --gas-adjustment "1.5" --fees 6000ulava --node "https://public-rpc.lavanet.xyz:443/rpc/"
+lavad tx pairing stake-provider "LAV1" "50006000000ulava" "123.45.67.890:2221,tendermintrpc,2 123.45.67.890:2221,rest,2 123.45.67.890,grpc,2" 2 --from lighthouse --provider-moniker Lighthouse --keyring-backend "test" --chain-id "lava-testnet-1" --gas="auto" --gas-adjustment "1.5" --fees 6000ulava --node "https://public-rpc.lavanet.xyz:443/rpc/"
 
-// ip-xxx:2221 - указывается ip нашего сервера где все это запускаем
+// 123.45.67.890:2221 - указывается ip нашего сервера где все это запускаем
 // в rpcprovider.yml указваем network-address: 0.0.0.0:2221 - порт который будет прослушиваться
 //
 //  node-urls:
-//      - url: http://167.86.82.139:1307   - указывается ip и порт того сервера, где находится сеть которую мы предоставляем
+//      - url: http://123.xx.xx.890:1307   - указывается ip и порт того сервера, где находится сеть которую мы предоставляем
 // т.е. если это Lava - то указвыается ip нашего сервера, а если это не Lava а другая сеть - то будет ip того сервера где 
 // стоит другая сеть
 //
@@ -29,7 +29,7 @@ lavad query pairing account-info \
 
 lavad test rpcprovider lava@1vu3xj8yv8280mx5pt64q4xg37692txwm422ymp
 
-lavad test rpcprovider --from lava@1vu3xj8yv8280mx5pt64q4xg37692txwm422ymp --endpoints "167.86.82.139:2221,rest,LAV1 167.86.82.139:2221,tendermintrpc,LAV1 167.86.82.139:2221,grpc,LAV1" --node https://public-rpc.lavanet.xyz:443/rpc/
+lavad test rpcprovider --from lava@1vu3xj8yv8280mx5pt64q4xg37692txwm422ymp --endpoints "123.45.67.890:2221,rest,LAV1 123.45.67.890:2221,tendermintrpc,LAV1 123.45.67.890:2221,grpc,LAV1" --node https://public-rpc.lavanet.xyz:443/rpc/
 
 
 // создаем сервис-демона для провайдера!!!! чтобы всегда работал
@@ -70,7 +70,7 @@ lavad tx slashing unjail --from lava@1vu3xj8yv8280mx5pt64q4xg37692txwm422ymp --c
 
 lavad tx pairing stake-provider "CANTO" \
 "50006000000ulava" \
-"167.86.82.139:2231,tendermintrpc,2 167.86.82.139:2231,rest,2 167.86.82.139:2231,grpc,2 167.86.82.139:2231,jsonrpc,2" 2 \
+"123.45.67.890:2231,tendermintrpc,2 123.45.67.890:2231,rest,2 123.45.67.890:2231,grpc,2 123.45.67.890:2231,jsonrpc,2" 2 \
 --from lava@1vu3xj8yv8280mx5pt64q4xg37692txwm422ymp \
 --provider-moniker Lighthouse \
 --keyring-backend "test" \
@@ -133,7 +133,7 @@ lavad tx pairing unstake-provider CANTO --from lighthouse --account-number 4158 
 
 lavad tx pairing stake-provider "ETH1" \
 "100012000000ulava" \
-"167.86.82.139:2241,jsonrpc,2" 2 \
+"123.45.67.890:2241,jsonrpc,2" 2 \
 --from lava@1vu3xj8yv8280mx5pt64q4xg37692txwm422ymp \
 --provider-moniker Lighthouse \
 --keyring-backend "test" \
@@ -191,7 +191,7 @@ sudo systemctl restart lava-provider-ETH
 
 lavad tx pairing stake-provider "ARB1" \
 "50006000000ulava" \
-"167.86.82.139:2251,jsonrpc,2" 2 \
+"123.45.67.890:2251,jsonrpc,2" 2 \
 --from lava@1vu3xj8yv8280mx5pt64q4xg37692txwm422ymp \
 --provider-moniker Lighthouse \
 --keyring-backend "test" \
@@ -215,7 +215,7 @@ lavad rpcprovider rpcprovider-arb.yml --from lighthouse --geolocation 2
 # тест провайдера
 
 lavad test rpcprovider lava@1vu3xj8yv8280mx5pt64q4xg37692txwm422ymp
-lavad test rpcprovider --from lava@1vu3xj8yv8280mx5pt64q4xg37692txwm422ymp --endpoints "167.86.82.139:2251,jsonrpc,ARB1" --node https://public-rpc.lavanet.xyz:443/rpc/ 
+lavad test rpcprovider --from lava@1vu3xj8yv8280mx5pt64q4xg37692txwm422ymp --endpoints "123.45.67.890:2251,jsonrpc,ARB1" --node https://public-rpc.lavanet.xyz:443/rpc/ 
 
 
 echo "[Unit]
@@ -249,7 +249,7 @@ sudo systemctl restart lava-provider-ARB
 
 lavad tx pairing stake-provider "POLYGON1" \
 "50006000000ulava" \
-"167.86.82.139:2231,jsonrpc,2" 2 \
+"123.45.67.890:2231,jsonrpc,2" 2 \
 --from lava@1vu3xj8yv8280mx5pt64q4xg37692txwm422ymp \
 --provider-moniker Lighthouse \
 --keyring-backend "test" \
@@ -273,7 +273,7 @@ lavad rpcprovider rpcprovider-poly.yml --from lighthouse --geolocation 2
 # тест провайдера
 
 lavad test rpcprovider lava@1vu3xj8yv8280mx5pt64q4xg37692txwm422ymp
-lavad test rpcprovider --from lava@1vu3xj8yv8280mx5pt64q4xg37692txwm422ymp --endpoints "167.86.82.139:2231,jsonrpc,POLYGON1" --node https://public-rpc.lavanet.xyz:443/rpc/ 
+lavad test rpcprovider --from lava@1vu3xj8yv8280mx5pt64q4xg37692txwm422ymp --endpoints "123.45.67.890:2231,jsonrpc,POLYGON1" --node https://public-rpc.lavanet.xyz:443/rpc/ 
 
 
 echo "[Unit]
@@ -333,7 +333,7 @@ lavad rpcprovider rpcprovider-apt.yml --from lighthouse --geolocation 2
 # тест провайдера
 
 lavad test rpcprovider lava@1vu3xj8yv8280mx5pt64q4xg37692txwm422ymp
-lavad test rpcprovider --from lava@1vu3xj8yv8280mx5pt64q4xg37692txwm422ymp --endpoints "167.86.82.139:2261,jsonrpc,APT1" --node https://public-rpc.lavanet.xyz:443/rpc/ 
+lavad test rpcprovider --from lava@1vu3xj8yv8280mx5pt64q4xg37692txwm422ymp --endpoints "123.45.67.890:2261,jsonrpc,APT1" --node https://public-rpc.lavanet.xyz:443/rpc/ 
 
 
 echo "[Unit]
