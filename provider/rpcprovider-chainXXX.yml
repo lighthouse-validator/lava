@@ -1,7 +1,7 @@
 endpoints:
   - api-interface: tendermintrpc
     chain-id: (sample) LAV1
-    network-address: 0.0.0.0:2221(порт указывается тот который будет прослушиваться)
+    network-address: 0.0.0.0:2221(порт указывается тот который будет прослушиваться на нашем сервере - где запускаем службу)
     node-urls:
       - url: ws://ip_server_chain:port(sample 26647)/websocket
       - url: http://ip_server:port(sample 26647)
