@@ -6,15 +6,16 @@
     * Note: You may need to run as sudo
     * Required packages installation
 
-    `### Packages installations\n
-    sudo apt update # in case of permissions error, try running with sudo`\n
-    `sudo apt install -y unzip logrotate git jq sed wget curl coreutils systemd`
-    `### Create the temp dir for the installation`
-    `temp_folder=$(mktemp -d) && cd $temp_folder`
+    ```### Packages installations  
+    sudo apt update # in case of permissions error, try running with sudo  
+    sudo apt install -y unzip logrotate git jq sed wget curl coreutils systemd  
+    
+    ### Create the temp dir for the installation  
+    temp_folder=$(mktemp -d) && cd $temp_folder```
 
     * Go installation
 
-`### Configurations
+### Configurations
 go_package_url="https://go.dev/dl/go1.18.linux-amd64.tar.gz"
 go_package_file_name=${go_package_url##*\/}
 # Download GO
