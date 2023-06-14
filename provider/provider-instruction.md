@@ -1,11 +1,3 @@
----
-sidebar_position: 1
-slug: /provider-setup
-title: Setup
----
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 
 # Provider Setup
 
