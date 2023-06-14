@@ -1,1 +1,1 @@
-!!!Join testnet - Manual setup with Cosmovisor!!!
+# Join testnet - Manual setup with Cosmovisor
